@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Check Cookies</title>
+</head>
+<body>
+  <h1 id="cookieStatus">Checking cookies...</h1>
+
+  <script>
+    function checkCookies() {
+      const cookies = document.cookie;
+      const cookieDisplay = document.getElementById("cookieStatus");
+
+      if (cookies) {
+        cookieDisplay.textContent = "Cookies Found: " + cookies;
+      } else {
+        cookieDisplay.textContent = "No Cookies Found.";
+      }
+    }
+
+    checkCookies(); // Run function on page load
+  </script>
+</body>
+</html>
