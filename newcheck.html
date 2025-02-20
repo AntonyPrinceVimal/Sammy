@@ -18,6 +18,7 @@
 
                 const data = await response.text(); 
                 document.getElementById("cookieStatus").textContent = "Response: " + data;
+                window.location.href="addProduct.html";
             } catch (error) {
                 console.error("Error checking cookies:", error);
                 document.getElementById("cookieStatus").textContent = "Error fetching cookies.";
