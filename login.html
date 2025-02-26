@@ -79,7 +79,8 @@
       if(!userName || !password){
         alert("please enter all fields")
       }
-      document.getElementById("userName").value = "";
+      else{
+        document.getElementById("userName").value = "";
 document.getElementById("password").value = "";
       try{
         data={
@@ -107,6 +108,8 @@ document.getElementById("password").value = "";
       catch(error){
         console.error("error",error);
       }
+      }
+      
     }
     function goToLogin(){
       changeSignColor();
