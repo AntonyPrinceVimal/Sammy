@@ -1,0 +1,285 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    padding: 0;
+    background: rgb(253, 107, 131);
+}
+.outline{
+    width: 40%;
+    height: 60%;
+    background: grey;
+    margin: 0;
+    padding: 0;
+    margin-left: 30%;
+    margin-top: 10%;
+    border-radius: 10px;
+}
+.headingDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+
+}
+.heading{
+    font-family: "Righteous";
+    color: rgb(248, 193, 204);
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+}
+.nameDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1%;
+}
+.name{
+    font-family: "Righteous";
+    color: black;
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+    margin-left: 5%;
+}
+.nameInputDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+.nameInput{
+    font-family: "Righteous";
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+    text-indent: 20px;
+}
+
+.passDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1%;
+}
+.pass{
+    font-family: "Righteous";
+    color: black;
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+    margin-left: 5%;
+}
+.passInputDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+.passInput{
+    font-family: "Righteous";
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+    text-indent: 20px;
+}
+
+
+.signDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+.sign{
+    font-family: "Righteous";
+    width: 40%;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5vw;
+    background: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+}
+.sign:hover{
+    background: rgb(250, 175, 121);
+    color: rgb(34, 33, 33);
+}
+.login:hover{
+    background: rgb(250, 175, 121);
+    color: rgb(34, 33, 33);
+}
+
+.orDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.or{
+    font-family: "Righteous";
+    color: black;
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+}
+.alreadyDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.already{
+    font-family: "Righteous";
+    color: black;
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+}
+.loginDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    font-family: "Righteous";
+    width: 40%;
+    height: 80%;
+    border: none;
+    font-size: 1.5vw;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+}
+
+@media screen and (max-width:850px){
+    .outline{
+        height: 40%;
+        margin-top: 30%;
+        width: 60%;
+        margin-left: 20%;
+    }
+    .heading{
+        font-size: 3vw;
+    }
+    .name{
+        font-size: 3vw;
+    }
+    .pass{
+        font-size: 3vw;
+    }
+    .or{
+        font-size: 3vw;
+    }
+    .already{
+        font-size: 3vw;
+    }
+    .sign{
+        font-size: 2vw;
+    }
+    .login{
+        font-size: 2vw;
+    }
+
+
+}
+@media screen and (max-width:500px){
+    .outline{
+        height: 30%;
+        margin-top: 35%;
+        width: 70%;
+        margin-left: 15%;
+
+    }
+    .heading{
+        font-size: 4vw;
+    }
+    .name{
+        font-size: 4vw;
+    }
+    .pass{
+        font-size: 4vw;
+    }
+    .or{
+        font-size: 4vw;
+    }
+    .already{
+        font-size: 4vw;
+    }
+    .sign{
+        font-size: 2.5vw;
+    }
+    .login{
+        font-size: 2.5vw;
+    }
+
+}
