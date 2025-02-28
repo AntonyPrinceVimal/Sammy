@@ -1,0 +1,285 @@
+html,body{
+    margin: 0%;
+    padding: 0%;
+    
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: rgb(243, 177, 53);
+}
+.outline{
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    width: 70%;
+    height: 70%;
+    background: grey;
+    margin: 0%;
+    padding: 0%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.headingDiv{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+}
+.heading{
+    font-family: "Viga";
+    font-size: 3vw;
+    padding: 0%;
+    margin: 0%;
+    line-height: 0.8;
+    color: white;
+}
+.pNameDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.pName{
+    font-size: 3vw;
+    margin: 0%;
+    padding: 0%;
+    line-height: 0.8;
+    font-family: "Itim";
+    color: black;
+}
+.pNameInputDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    
+}
+#productName{
+    width: 80%;
+    height: 80%;
+    padding: 0%;
+    margin: 0%;
+    border: none;
+    transform: translateX(10%) translateY(10%);
+    text-indent: 2%;
+    font-family: "Poppins";
+    border-radius: 10px;
+}
+
+.pPriceDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.pPrice{
+    font-size: 3vw;
+    margin: 0%;
+    padding: 0%;
+    line-height: 0.8;
+    font-family: "Itim";
+    color: black;
+}
+.pPriceInputDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    
+}
+#productPrice{
+    width: 80%;
+    height: 80%;
+    padding: 0%;
+    margin: 0%;
+    border: none;
+    transform: translateX(10%) translateY(10%);
+    text-indent: 2%;
+    font-family: "Poppins";
+    border-radius: 10px;
+}
+
+
+.pDetailDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.pDetail{
+    font-size: 3vw;
+    margin: 0%;
+    padding: 0%;
+    line-height: 0.8;
+    font-family: "Itim";
+    color: black;
+}
+.pDetailInputDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    
+}
+#productDetail{
+    width: 80%;
+    height: 80%;
+    padding: 0%;
+    margin: 0%;
+    border: none;
+    transform: translateX(10%) translateY(10%);
+    text-indent: 2%;
+    font-family: "Poppins";
+    border-radius: 10px;
+}
+
+.pImageDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.pImage{
+    font-size: 3vw;
+    margin: 0%;
+    padding: 0%;
+    line-height: 0.8;
+    font-family: "Itim";
+    color: black;
+}
+.pImageInputDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    
+}
+#productImage{
+    width: 80%;
+    height: 80%;
+    padding: 0%;
+    margin: 0%;
+    border: none;
+    transform: translateX(10%) translateY(10%);
+    text-indent: 2%;
+    font-family: "Poppins";
+    border-radius: 10px;
+}
+
+
+.checkDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: start;
+}
+.checkboxDiv{
+    width: 5%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 6%;
+}
+.check{
+    width: 50%;
+    height: 50%;
+    
+}
+.checkmsgDiv{
+    width: 50%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.checkmsg{
+    font-size: 2vw;
+    margin: 0%;
+    padding: 0%;
+    color: black;
+    font-family: "Itim";
+}
+.submitButtonDiv{
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    background: grey;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submitButton{
+    width: 20%;
+    height: 80%;
+    background: rgb(248, 143, 143);
+    border: none;
+    border-radius: 10px;
+    font-family: "Righteous";
+    margin: 0%;
+    padding: 0%;
+    font-size: 2vw;
+}
+.submitButton:hover{
+    background: rgb(250, 110, 110);
+}
+
+@media screen and (max-width:850px){
+    .outline{
+        height: 60%;
+        top: 20%;
+    }
+}
+@media screen and (max-width:500px){
+    .outline{
+        height: 50%;
+        top: 25%;
+    }
+    #productName::placeholder{
+        font-size: 3vw;
+    }
+    #productPrice::placeholder{
+        font-size: 3vw;
+    }
+    #productDetail::placeholder{
+        font-size: 3vw;
+    }
+    #productImage::placeholder{
+        font-size: 3vw;
+    }
+    .pName,.pDetail,.pImage,.pPrice{
+        font-size: 3.7vw;
+    }
+    .checkmsg{
+        font-size: 3vw;
+    }
+    .check{
+        width: 60%;
+        height: 60%;
+    }
+}
