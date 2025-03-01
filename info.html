@@ -55,7 +55,7 @@
         
         document.getElementById("username").textContent = `NAME: ${userInfo.userName}`;
         document.getElementById("createdAt").textContent = `ACCOUNT CREATED AT: ${new Date(userInfo.createdAt).toLocaleString()}`;
-        document.getElementById("purchase").textContent = `NO.OF ITEMS BOUGHT: ${userInfo.[" myPurchase"].length}`;
+        document.getElementById("purchase").textContent = `NO.OF ITEMS BOUGHT: ${userInfo[" myPurchase"].length}`;
     } catch (error) {
         console.error("Error fetching user info:", error);
         alert("sabaaa");
