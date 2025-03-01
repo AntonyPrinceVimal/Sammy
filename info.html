@@ -35,17 +35,17 @@
         const userInfo = await response.json();
         console.log(userInfo);
         const userInfo = await response.json();
-        var userName=userInfo.userName;
-        var userTime=new Date(userInfo.createdAt).toLocaleString();
-        var userItems=userInfo.myPurchase.length;
+        let userName=userInfo.userName;
+        let userTime=new Date(userInfo.createdAt).toLocaleString();
+        let userItems=userInfo.myPurchase.length;
 
-        outline=document.getElementById("outline");
+        const outline=document.getElementById("outline");
 
-        headingDiv=document.createElement("div");
+        const headingDiv=document.createElement("div");
         outline.appendChild(headingDiv);
         headingDiv.classList.add("headingDiv");
 
-        heading=document.createElement("h1");
+        const heading=document.createElement("h1");
         headingDiv.appendChild(heading);
         heading.classList.add("heading");
         heading.textContent="YOUR DETAILS";
