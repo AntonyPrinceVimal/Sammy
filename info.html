@@ -21,7 +21,7 @@
                 <h1 class="heading">YOUR DETAILS</h1>
             </div>
             <div class="nameDiv">
-                <h1 class="name">NAME: THOOKUDURAI</h1>
+                <h1 class="name" id="name">NAME: THOOKUDURAI</h1>
             </div>
             <div class="timeDiv">
                 <h1 class="time">ACCOUNT CREATED AT:</h1>
@@ -54,56 +54,15 @@
                 
                 const userInfo = await response.json();
                 const userName=userInfo.userName;
+                
                 const userTime=new Date(userInfo.createdAt).toLocaleString();
                 const userItems=userInfo.myPurchase.length;
 
                 const outline=document.getElementById("outline");
 
-                const headingDiv=document.createElement("div");
-                outline.appendChild(headingDiv);
-                headingDiv.classList.add("headingDiv");
+                const name=document.getElementById("name");
 
-                const heading=document.createElement("h1");
-                headingDiv.appendChild(heading);
-                heading.classList.add("heading");
-                heading.textContent="YOUR DETAILS";
-
-                nameDiv=document.createElement("div");
-                outline.appendChild(nameDiv);
-                nameDiv.classList.add("nameDiv");
-
-                name=document.createElement("h1");
-                nameDiv.appendChild(name);
-                name.classList.add("name");
-                name.textContent=`NAME: ${userName}`;
-
-
-                timeDiv=document.createElement("div");
-                outline.appendChild(timeDiv);
-                timeDiv.classList.add("timeDiv");
-
-                time=document.createElement("h1");
-                timeDiv.appendChild(time);
-                time.classList.add("time");
-                time.textContent=`CREATED AT: ${userTime}`;
-
-                purchaseDiv=document.createElement("div");
-                outline.appendChild(purchaseDiv);
-                purchaseDiv.classList.add("purchaseDiv");
-
-                purchase=document.createElement("h1");
-                purchaseDiv.appendChild(purchase);
-                purchase.classList.add("purchase");
-                purchase.textContent=`NO.OF ITEMS BOUGHT: ${userItems}`;
-
-                buttonDiv=document.createElement("div");
-                outline.appendChild(buttonDiv);
-                buttonDiv.classList.add("buttonDiv");
-
-                button=document.createElement("button");
-                buttonDiv.appendChild(button);
-                button.classList.add("button");
-                button.textContent="GO TO HOME";
+                name.textContent=userInfo.userName;
 
                 button.addEventListener("click",()=>{
                     button.style.background="rgb(114, 1, 114)";
