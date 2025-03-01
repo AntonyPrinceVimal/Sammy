@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Example</title>
+    <link rel="stylesheet" href="info.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="outline" id="outline">
+            <div class="headingDiv">
+                <h1 class="heading">YOUR DETAILS</h1>
+            </div>
+            <div class="nameDiv">
+                <h1 class="name">NAME: THOOKUDURAI</h1>
+            </div>
+            <div class="timeDiv">
+                <h1 class="time">ACCOUNT CREATED AT:</h1>
+            </div>
+            <div class="purchaseDiv">
+                <h1 class="purchase">NO.OF ITEMS BOUGHT</h1>
+            </div>
+            <div class="buttonDiv">
+                <button class="button" id="button" onclick="goHome()">Go to Home</button>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <script>
+        
+        
+        async function getUserInfo() {
+            try {
+                const response = await fetch("https://full-stack-6-889f.onrender.com/info", {
+                    method: "GET",
+                    credentials: "include", 
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch user info");
+                    alert("response failed, try again later");
+                }
+                
+                const userInfo = await response.json();
+                const userName=userInfo.userName;
+                const userTime=new Date(userInfo.createdAt).toLocaleString();
+                const userItems=userInfo.myPurchase.length;
+
+                const outline=document.getElementById("outline");
+
+                const headingDiv=document.createElement("div");
+                outline.appendChild(headingDiv);
+                headingDiv.classList.add("headingDiv");
+
+                const heading=document.createElement("h1");
+                headingDiv.appendChild(heading);
+                heading.classList.add("heading");
+                heading.textContent="YOUR DETAILS";
+
+                nameDiv=document.createElement("div");
+                outline.appendChild(nameDiv);
+                nameDiv.classList.add("nameDiv");
+
+                name=document.createElement("h1");
+                nameDiv.appendChild(name);
+                name.classList.add("name");
+                name.textContent=`NAME: ${userName}`;
+
+
+                timeDiv=document.createElement("div");
+                outline.appendChild(timeDiv);
+                timeDiv.classList.add("timeDiv");
+
+                time=document.createElement("h1");
+                timeDiv.appendChild(time);
+                time.classList.add("time");
+                time.textContent=`CREATED AT: ${userTime}`;
+
+                purchaseDiv=document.createElement("div");
+                outline.appendChild(purchaseDiv);
+                purchaseDiv.classList.add("purchaseDiv");
+
+                purchase=document.createElement("h1");
+                purchaseDiv.appendChild(purchase);
+                purchase.classList.add("purchase");
+                purchase.textContent=`NO.OF ITEMS BOUGHT: ${userItems}`;
+
+                buttonDiv=document.createElement("div");
+                outline.appendChild(buttonDiv);
+                buttonDiv.classList.add("buttonDiv");
+
+                button=document.createElement("button");
+                buttonDiv.appendChild(button);
+                button.classList.add("button");
+                button.textContent="GO TO HOME";
+
+                button.addEventListener("click",()=>{
+                    button.style.background="rgb(114, 1, 114)";
+                    button.style.color="white";
+                    setTimeout(()=>{
+                        button.style.background="rgb(187, 3, 187)";
+                        button.style.color="black";
+                    },2000);
+                    window.location.href="home.html";
+                });
+                
+
+        
+
+        
+            }
+            catch (error) {
+                console.error("Error fetching user info:", error);
+                alert("error try again");
+            }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", getUserInfo);
+        
+    </script>
+</body>
+</html>
