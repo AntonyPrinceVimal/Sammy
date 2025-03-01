@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Example</title>
+    <link rel="stylesheet" href="info.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="main">
+        <div class="outline" id="outline">
+            <div class="headingDiv">
+                <h1 class="heading">YOUR DETAILS</h1>
+            </div>
+            <div class="nameDiv" id="username">
+                <h1 class="name">NAME: THOOKUDURAI</h1>
+            </div>
+            <div class="timeDiv">
+                <h1 class="time" id="createdAt">ACCOUNT CREATED AT:</h1>
+            </div>
+            <div class="purchaseDiv">
+                <h1 class="purchase" id="purchase">NO.OF ITEMS BOUGHT</h1>
+            </div>
+            <div class="buttonDiv">
+                <button class="button" id="button" onclick="goHome()">Go to Home</button>
+            </div>
+            
+        </div>
+     </div>
+    
+
+    <script>
+        async function getUserInfo() {
+    try {
+        const response = await fetch("https://full-stack-6-889f.onrender.com/info", {
+            method: "GET",
+            credentials: "include", 
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch user info");
+        }
+
+        const userInfo = await response.json();
+        console.log(userInfo);
+
+        
+        document.getElementById("username").textContent = `NAME: ${userInfo.userName}`;
+        document.getElementById("createdAt").textContent = `ACCOUNT CREATED AT: ${new Date(userInfo.createdAt).toLocaleString()}`;
+        document.getElementById("purchase").textContent = `NO.OF ITEMS BOUGHT: ${userInfo[" myPurchase"].length}`;
+    } catch (error) {
+        console.error("Error fetching user info:", error);
+        alert("sabaaa");
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", getUserInfo);
+        
+    </script>
+</body>
+</html>
