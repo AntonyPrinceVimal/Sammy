@@ -47,7 +47,7 @@
         
   </div>
   <div class="loaderDiv">
-    <div class="loader"></div>
+    <div class="loader" id="loader"></div>
   </div>
   <script>
     sign=document.getElementById('sign');
@@ -72,6 +72,8 @@
     async function signup(){
       const userName=document.getElementById("userName").value;
       const password=document.getElementById("password").value;
+      const loader=document.getElementById("loader");
+      loader.style.display="block";
       changeSignColor();
       if(!userName || !password){
         alert("please enter all fields")
@@ -96,6 +98,8 @@ document.getElementById("password").value = "";
         console.log(result);
         if(JSON.parse(result)=="success"){
           alert("signed in successful");
+          const loader=document.getElementById("loader");
+          loader.style.display="none";
           window.location.href="home.html";
           
         }
