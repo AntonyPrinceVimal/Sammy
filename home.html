@@ -19,6 +19,9 @@
 <body>
   
   <div id="mainn"></div>
+  <div class="loaderDiv">
+    <div class="loader" id="loader"></div>
+  </div>
   <script>
 
 
@@ -120,6 +123,8 @@
               head6.style.background="rgb(245, 162, 54)";
               head6.style.color="black";
             },1000);
+            const loader=document.getElementById("loader");
+            loader.style.display="block";
             purchase(doc);
           });
 
@@ -151,6 +156,8 @@
             myBtn.style.background="pink";
             myBtn.style.color="black";
           },1000);
+          const loader=document.getElementById("loader");
+          loader.style.display="block";
           window.location.href="myProduct.html";
         });
 
@@ -165,6 +172,8 @@
             addBtn.style.background="pink";
             addBtn.style.color="black";
           },1000);
+          const loader=document.getElementById("loader");
+          loader.style.display="block";
           window.location.href="addProduct.html";
         });
 
@@ -179,6 +188,8 @@
             infoBtn.style.background="pink";
             infoBtn.style.color="black";
           },1000);
+          const loader=document.getElementById("loader");
+          loader.style.display="block";
           window.location.href="info.html";
         });
 
@@ -209,9 +220,13 @@
         fResult=JSON.parse(result);
         if(fResult=="added increment and myPurchase"){
           alert("myPurchase and increment successful");
+          const loader=document.getElementById("loader");
+          loader.style.display="none";
         }
         else{
           alert("edho error");
+          const loader=document.getElementById("loader");
+          loader.style.display="none";
         }
         
       }
