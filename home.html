@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Home Page</title>
   <link href="style.css" rel="stylesheet" type="text/css" /><link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -224,13 +224,13 @@
         });
         const result= await response.text();
         fResult=JSON.parse(result);
-        if(fResult=="added increment and myPurchase"){
+        if(fResult=="Purchased successfully"){
           alert("myPurchase and increment successful");
           const loader=document.getElementById("loader");
           loader.style.display="none";
         }
         else{
-          alert("edho error");
+          alert("error,try again");
           const loader=document.getElementById("loader");
           loader.style.display="none";
         }
