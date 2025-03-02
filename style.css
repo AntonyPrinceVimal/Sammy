@@ -76,7 +76,7 @@ html, body{
   bottom:0%;
   display:flex;
   justify-content: center;
-  
+  align-items:center;
 }
 .imagee {
   width: 100%;
