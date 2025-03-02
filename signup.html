@@ -127,6 +127,10 @@ document.getElementById("password").value = "";
       loader.style.display="block";
       window.location.href="login.html";
     }
+    window.addEventListener("pageshow",()=>{
+      const loader=document.getElementById("loader");
+      loader.style.display="none";
+    });
   </script>
 </body>
 
