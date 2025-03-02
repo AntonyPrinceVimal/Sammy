@@ -118,7 +118,34 @@ html,body{
 .button:hover{
     background: rgb(156, 1, 156);
 }
+.loaderDiv{
+    width:100%;
+    height:70px;
+    position:absolute;
+    top:10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+    
+.loader{
+    width: 50px;
+    height: 50px;
+    border: 10px solid transparent;
+    border-top: 10px solid aqua;
+    border-radius: 50%;
+    animation: loading 1s linear infinite;
 
+    display:none;
+}
+@keyframes loading{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 @media screen and (max-width:850px){
     .outline{
         height:35%;
