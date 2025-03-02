@@ -324,7 +324,11 @@
         }
         window.addEventListener("pageshow",()=>{
             
-            
+            document.getElementById("productName").value="";
+            document.getElementById("productPrice").value="";
+            document.getElementById("productDetail").value="";
+            document.getElementById("productImage").value="";
+            document.getElementById("checkBox").checked=false;
             const loader=document.getElementById("loader");
             loader.style.display="none";
         });
