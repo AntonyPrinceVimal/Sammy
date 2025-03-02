@@ -224,8 +224,8 @@
         });
         const result= await response.text();
         fResult=JSON.parse(result);
-        if(fResult=="Purchased successfully"){
-          alert("myPurchase and increment successful");
+        if(fResult=="added increment and myPurchase"){
+          alert("Purchased successfully");
           const loader=document.getElementById("loader");
           loader.style.display="none";
         }
