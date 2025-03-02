@@ -18,6 +18,9 @@
 <body>
   
   <div id="mainn"></div>
+  <div class="loaderDiv">
+    <div class="loader" id="loader"></div>
+  </div>
   <script>
     async function homePage() {
       
@@ -144,6 +147,8 @@
         myBtn.textContent="Go to home";
         myBtn.classList.add("myProductButton");
         myBtn.addEventListener("click",()=>{
+          const loader=document.getElementById("loader");
+          loader.style.display="block";
           myBtn.style.background="rgb(247, 124, 36)";
           myBtn.style.color="black";
           setTimeout(()=>{
@@ -158,6 +163,8 @@
         addBtn.textContent="Add Your Product";
         addBtn.classList.add("addProductButton");
         addBtn.addEventListener("click",()=>{
+          const loader=document.getElementById("loader");
+          loader.style.display="block";
           addBtn.style.background="rgb(247, 124, 36)";
           addBtn.style.color="black";
           setTimeout(()=>{
@@ -172,6 +179,8 @@
         infoBtn.textContent="Your Details";
         infoBtn.classList.add("infoButton");
         infoBtn.addEventListener("click",()=>{
+          const loader=document.getElementById("loader");
+          loader.style.display="block";
           infoBtn.style.background="rgb(247, 124, 36)";
           infoBtn.style.color="black";
           setTimeout(()=>{
