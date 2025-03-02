@@ -201,7 +201,10 @@
     function print(a){
       console.log(a);
     }
-    
+    window.addEventListener("pageshow",()=>{
+      const loader=document.getElementById("loader");
+      loader.style.display="none";
+    });
   </script>
 </body>
 
