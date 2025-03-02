@@ -160,7 +160,7 @@
           loader.style.display="block";
           window.location.href="myProduct.html";
           
-          loader.style.display="none";
+          
         });
 
         const addBtn=document.createElement("button");
@@ -178,7 +178,7 @@
           loader.style.display="block";
           window.location.href="addProduct.html";
           
-          loader.style.display="none";
+          
         });
 
         const infoBtn=document.createElement("button");
@@ -196,7 +196,7 @@
           loader.style.display="block";
           window.location.href="info.html";
           
-          loader.style.display="none";
+          
         });
 
     } 
@@ -240,6 +240,11 @@
         console.error(error);
       }
     }
+    window.addEventListener("pageshow",()=>{
+      const loader=document.getElementById("loader");
+      loader.style.display="none";
+    });
+
     
   </script>
 </body>
