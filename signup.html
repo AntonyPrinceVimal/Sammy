@@ -123,6 +123,8 @@ document.getElementById("password").value = "";
     }
     function goToLogin(){
       changeLogColor();
+      const loader=document.getElementById("loader");
+      loader.style.display="block";
       window.location.href="login.html";
     }
   </script>
