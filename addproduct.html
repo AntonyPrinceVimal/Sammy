@@ -236,6 +236,9 @@
 
         </div>
     </div>
+    <div class="loaderDiv">
+    <div class="loader" id="loader"></div>
+    </div>
     <script>
         function colorChange(){
             submit=document.getElementById("submit");
@@ -247,6 +250,8 @@
             },1000);
         }
         function addProduct(){
+            const loader=document.getElementById("loader");
+            loader.style.display="block";
             colorChange();
             const name=document.getElementById("productName").value;
             const price=document.getElementById("productPrice").value;
@@ -309,6 +314,12 @@
                 alert("try again" + error.message);
             }
         }
+        window.addEventListener("pageshow",()=>{
+            
+            
+            const loader=document.getElementById("loader");
+            loader.style.display="none";
+        });
   
     </script>
 </body>
