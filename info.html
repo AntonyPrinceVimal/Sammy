@@ -35,6 +35,11 @@
             
         </div>
      </div>
+    <div class="loaderDiv">
+        
+        
+        <div class="loader" id="loader"></div>
+    </div>
     
 
     <script>
@@ -49,6 +54,8 @@
             },2000);
         }
         function goHome(){
+            const loader=document.getElementById("loader");
+            loader.style.display="block";
             changeLogColor();
             window.location.href="home.html";
         }
@@ -80,6 +87,10 @@
 
 
 document.addEventListener("DOMContentLoaded", getUserInfo);
+window.addEventListener("pageshow",()=>{
+      const loader=document.getElementById("loader");
+      loader.style.display="none";
+});
         
     </script>
 </body>
