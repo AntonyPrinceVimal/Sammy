@@ -77,6 +77,8 @@
       changeSignColor();
       if(!userName || !password){
         alert("please enter all fields")
+        const loader=document.getElementById("loader");
+        loader.style.display="none";
       }
       else{
         document.getElementById("userName").value = "";
@@ -105,11 +107,15 @@ document.getElementById("password").value = "";
         }
         else{
           alert("username already exist, try another one");
+          const loader=document.getElementById("loader");
+          loader.style.display="none";
         }
       }
       catch(error){
         console.error("error",error);
         alert("naasam");
+        const loader=document.getElementById("loader");
+        loader.style.display="none";
       }
       }
         
