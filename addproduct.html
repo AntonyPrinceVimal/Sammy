@@ -260,14 +260,20 @@
             const checkBox=document.getElementById("checkBox");
             let finalUrl="";
             if(!name || !price || !detail){
-                alert("please enter all fields")
+                alert("please enter all fields");
+                const loader=document.getElementById("loader");
+                loader.style.display="none";
             }
             else{
                 if(!image && !checkBox.checked){
-                    alert("please either enter URL or use upload later option")
+                    alert("please either enter URL or use upload later option");
+                    const loader=document.getElementById("loader");
+                    loader.style.display="none";
                 }
                 if(image && checkBox.checked){
-                    alert("please either remove the URl or un-tick upload later option")
+                    alert("please either remove the URl or un-tick upload later option");
+                    const loader=document.getElementById("loader");
+                    loader.style.display="none";
                 }
                 if(image && !checkBox.checked){
                     finalUrl=image;
@@ -306,6 +312,8 @@
                 result=JSON.parse(ress);
                 if(result=="product uploaded successfully"){
                     alert("products added successful");
+                    const loader=document.getElementById("loader");
+                    loader.style.display="none";
                     window.location.href="home.html";
                 }
             }
