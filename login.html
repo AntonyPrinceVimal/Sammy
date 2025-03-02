@@ -51,6 +51,9 @@
         </div>
         
   </div>
+  <div class="loaderDiv">
+    <div class="loader" id="loader"></div>
+  </div>
   <script>
 
     sign=document.getElementById('sign');
@@ -76,8 +79,12 @@
       const userName=document.getElementById("userName").value;
       const password=document.getElementById("password").value;
       changeLogColor();
+      const loader=document.getElementById("loader");
+      loader.style.display="block";
       if(!userName || !password){
         alert("please enter all fields")
+        const loader=document.getElementById("loader");
+        loader.style.display="none";
       }
       else{
         document.getElementById("userName").value = "";
@@ -99,10 +106,14 @@ document.getElementById("password").value = "";
         
         if(JSON.parse(result)=="logged and setted cookie"){
           alert("logged in successful");
+          const loader=document.getElementById("loader");
+          loader.style.display="none";
           window.location.href="home.html";
         }
         else{
           alert("no username exist")
+          const loader=document.getElementById("loader");
+          loader.style.display="none";
         }
       }
       catch(error){
@@ -113,6 +124,8 @@ document.getElementById("password").value = "";
     }
     function goToLogin(){
       changeSignColor();
+      const loader=document.getElementById("loader");
+      loader.style.display="block";
       window.location.href="signup.html";
     }
   </script>
